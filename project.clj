@@ -1,4 +1,4 @@
-(defproject com.gfredericks/dot-slash "0.1.0-SNAPSHOT"
+(defproject com.gfredericks/dot-slash "0.1.0"
   :description "Simple setup for a custom repl utils namespace."
   :url "https://github.com/gfredericks/dot-slash"
   :license {:name "Eclipse Public License"
