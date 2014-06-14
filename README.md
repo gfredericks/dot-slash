@@ -12,7 +12,7 @@ accessed the same way no matter how you are evaluating code.
 In your `:user` profile (or whatever):
 
 ``` clojure
-  :plugins [[com.gfredericks/dot-slash "0.1.0-SNAPSHOT"]
+  :plugins [[com.gfredericks/dot-slash "0.1.0"]
             ...]
   :dot-slash {:vars [clojure.pprint/pprint
                      ...]}
