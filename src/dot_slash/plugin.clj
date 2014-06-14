@@ -3,9 +3,17 @@
 (defn middleware
   [project]
   (if-let [{:keys [vars ns] :or {ns '.}} (:dot-slash project)]
-    (let [repl-init-code
+    (let [namespaces (->> vars
+                          (map (fn [var-decl]
+                                 (cond (symbol? var-decl)
+                                       (symbol (namespace var-decl))
+
+                                       (vector? var-decl)
+                                       (first var-decl))))
+                          (distinct))
+          repl-init-code
           `(do (ns ~ns
-                 (:require ~'potemkin))
+                 (:require ~'potemkin ~@namespaces))
                (potemkin/import-vars ~@vars)
                (ns ~'user))
           current-repl-init (get-in project [:repl-options :init])
