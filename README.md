@@ -45,6 +45,11 @@ user=> (./pprint (apply array-map (range 40)))
 nil
 ```
 
+## Future Embetterment
+
+1. Generate a file, e.g. `.dot-slash/.clj` and put it on the classpath
+2. Ability to rename vars
+
 ## License
 
 Copyright © 2014 Gary Fredericks
