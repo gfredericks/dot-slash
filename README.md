@@ -49,6 +49,7 @@ nil
 
 1. Generate a file, e.g. `.dot-slash/.clj` and put it on the classpath
 2. Ability to rename vars
+3. Ability to import a whole namespace
 
 ## License
 
